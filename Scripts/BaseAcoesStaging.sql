@@ -1,0 +1,14 @@
+CREATE DATABASE BaseAcoesStaging
+GO
+
+USE BaseAcoesStaging
+GO
+
+CREATE TABLE dbo.Acoes(
+    Id INT IDENTITY(1,1) NOT NULL,
+    Codigo VARCHAR(15) NOT NULL,
+    DataReferencia DATETIME NOT NULL,
+    Valor NUMERIC (10,4) NOT NULL,
+    CONSTRAINT PK_Acoes PRIMARY KEY (Id)
+)
+GO

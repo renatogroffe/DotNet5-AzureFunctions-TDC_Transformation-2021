@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "BaseAcoesStaging": "",
+    "AzureServiceBus_Connection": "",
+    "AzureServiceBus_Topic": "topic-acoes",
+    "CodCorretora": "00001",
+    "NomeCorretora": "Teste Corretora"
+  }
+}
