@@ -22,9 +22,8 @@ namespace FunctionAppProcessarAcoes
 
         [Function("Acoes")]
         [OpenApiOperation(operationId: "Acoes", tags: new[] { "Acoes" }, Summary = "Acao", Description = "Consultar as cotações de Ações.", Visibility = OpenApiVisibilityType.Important)]
-        //[OpenApiSecurity("function_key", SecuritySchemeType.ApiKey, Name = "code", In = OpenApiSecurityLocationType.Query)]
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json", bodyType: typeof(Acao[]), Summary = "Consulta de cotações de Ações.", Description = "Consulta de cotações de Ações.")]
-        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequestData req,
+        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData req,
             FunctionContext executionContext)
         {
             var logger = executionContext.GetLogger("Acoes");
